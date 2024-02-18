@@ -7,28 +7,33 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class TestSelectMethods {
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class TestSugarcrmAndSeleniumEasy {
 
     WebDriver driver;
 
+    private final String sugarcrmUrl = "https://www.sugarcrm.com/uk/request-demo/";
+
     @BeforeEach
-    public void setup(){
+    public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
     }
 
     @AfterEach
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 
     @Test
-    public void webDriverMethods(){
-        driver.get("https://www.sugarcrm.com/uk/request-demo/");
+    public void webDriverMethods() {
+        driver.get(sugarcrmUrl);
         driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
         driver.findElement(By.name("email")).sendKeys("blabla");
         driver.findElement(By.name("email")).clear();
@@ -45,8 +50,8 @@ public class TestSelectMethods {
     }
 
     @Test
-    public void handleDropdownSelectTagAndOptions() throws InterruptedException{
-        driver.get("https://www.sugarcrm.com/uk/request-demo/");
+    public void handleDropdownSelectTagAndOptions() throws InterruptedException {
+        driver.get(sugarcrmUrl);
         driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
         driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
         WebElement companySize = driver.findElement(By.xpath("//select[@name='employees_c']"));
@@ -62,7 +67,7 @@ public class TestSelectMethods {
     }
 
     @Test
-    public void handleDropdownSelectDeselectMultipleOption() throws InterruptedException{
+    public void handleDropdownSelectDeselectMultipleOption() throws InterruptedException {
         driver.get("https://demo.seleniumeasy.com/basic-select-dropdown-demo.html");
         WebElement listBox = driver.findElement(By.id("multi-select"));
         Select multipleOptions = new Select(listBox);
@@ -85,4 +90,40 @@ public class TestSelectMethods {
         System.out.println("selectedAgain.size() = " + selectedAgain.size());
         Thread.sleep(2000);
     }
+
+    @Test
+    public void checkBox() throws InterruptedException {
+        driver.get("https://demo.seleniumeasy.com/basic-checkbox-demo.html");
+        Thread.sleep(2000);
+        WebElement option1 = driver.findElement(By.xpath("//label[text()='Option 1']"));
+        option1.click();
+        boolean isSelected = driver.findElement(By.xpath("//div[1]/label/input")).isSelected();
+        assertTrue(isSelected);
+        Thread.sleep(2000);
+        option1.click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(option1);
+        actions.perform();
+        option1.click();
+        Thread.sleep(2000);
+        option1.click();
+        Thread.sleep(2000);
+        System.out.println(driver.findElements(By.xpath("//input[@type='checkbox']")).size());
+    }
+
+    @Test
+    public void radioButton() throws InterruptedException {
+        driver.get("https://demo.seleniumeasy.com/basic-radiobutton-demo.html");
+        WebElement radioSex = driver.findElement(By.xpath("//input[@name='optradio' and @value='Male'] "));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(radioSex);
+        actions.perform();
+        radioSex.click();
+        Thread.sleep(2000);
+        boolean radioSexIsSelectedMale = radioSex.isSelected();
+        assertTrue(radioSexIsSelectedMale);
+        System.out.println(driver.findElements(By.xpath("//input[@type='radio']")).size());
+    }
+
+
 }
