@@ -85,6 +85,4 @@ public class TestSelectMethods {
         System.out.println("selectedAgain.size() = " + selectedAgain.size());
         Thread.sleep(2000);
     }
-
-
 }
