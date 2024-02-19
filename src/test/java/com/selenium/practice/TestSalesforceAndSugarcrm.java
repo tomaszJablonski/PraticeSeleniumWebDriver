@@ -7,12 +7,16 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
-public class TestSalesforce {
+public class TestSalesforceAndSugarcrm {
 
     WebDriver driver;
+    private final String SALESFORCE_URL = "https://www.salesforce.com/eu/form/starter/overview-demo/?d=pb";
 
     @BeforeEach
     public void setup() {
@@ -39,7 +43,7 @@ public class TestSalesforce {
 
     @Test
     public void printAllOptionInSalesForce() {
-        driver.get("https://www.salesforce.com/eu/form/starter/overview-demo/?d=pb");
+        driver.get(SALESFORCE_URL);
         List<WebElement> allTags = driver.findElements(By.tagName("option"));
         System.out.println("Total tags are: " + allTags.size());
 
@@ -51,7 +55,7 @@ public class TestSalesforce {
 
     @Test
     public void printAllOptionInSalesForce1(){
-        driver.get("https://www.salesforce.com/eu/form/starter/overview-demo/?d=pb");
+        driver.get(SALESFORCE_URL);
         List<WebElement> allTags = driver.findElements(By.name("CompanyEmployees"));
         System.out.println("Total tags are: " + allTags.size());
 
@@ -59,6 +63,29 @@ public class TestSalesforce {
             System.out.println("Links on page are " + allTag.getAttribute("value"));
             System.out.println("Links on page are " + allTag.getText());
         }
+    }
+
+    @Test
+    public void handleMultipleWindowsOrSwitchWindows() throws InterruptedException{
+        driver.get("https://www.sugarcrm.com/uk/?utm_source=sugarcrm.com&utm_medium=referral");
+        driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
+        driver.findElement(By.xpath("//a[text()='Get A Demo']")).click();
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://www.sugarcrm.com/uk/?utm_source=sugarcrm.com&utm_medium=referral");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[text()='Get A Demo']")).click();
+        driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
+        Set<String> windowHandles = driver.getWindowHandles();
+        System.out.println(windowHandles);
+        Iterator<String> iterator = windowHandles.iterator();
+        String parentWindow = iterator.next();
+        String childWindow = iterator.next();
+        driver.switchTo().window(parentWindow);
+        driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
+        driver.switchTo().window(childWindow);
+        driver.findElement(By.name("firstname")).sendKeys("Tomasz");
+        driver.findElement(By.name("lastname")).sendKeys("Jabłoński");
+        Thread.sleep(5000);
 
     }
 }
