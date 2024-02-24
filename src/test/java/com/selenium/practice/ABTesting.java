@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ABTesting {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Logger logger = Logger.getLogger(ABTesting.class.getName());
 
@@ -19,15 +19,15 @@ public class ABTesting {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        logger.log(Level.INFO,"***** I load the site *****");
+        logger.log(Level.INFO, "***** I load the site *****");
         driver.get("https://the-internet.herokuapp.com/?ref=hackernoon.com");
-        logger.log(Level.INFO,"I am looking for a text A/B Testing");
+        logger.log(Level.INFO, "I am looking for a text A/B Testing");
         driver.findElement(By.linkText("A/B Testing")).isDisplayed();
-        logger.log(Level.INFO,"I click on text A/B Testing");
+        logger.log(Level.INFO, "I click on text A/B Testing");
         driver.findElement(By.linkText("A/B Testing")).click();
-        logger.log(Level.INFO,"Text A/B Test Control is displayed");
+        logger.log(Level.INFO, "Text A/B Test Control is displayed");
         driver.findElement(By.cssSelector("h3")).isDisplayed();
-        logger.log(Level.INFO,"The program is over");
+        logger.log(Level.INFO, "The program is over");
 
         driver.close();
         driver.quit();

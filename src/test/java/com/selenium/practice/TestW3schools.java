@@ -4,25 +4,31 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
 
 public class TestW3schools {
 
     WebDriver driver;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
     @AfterEach
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 
     @Test
-    public void framesByIndexAndAlertsPopup(){
+    public void framesByIndexAndAlertsPopup() {
         driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert");
         driver.findElement(By.xpath("//div[@id='accept-choices']")).click();
 //        driver.switchTo().frame(0); index
@@ -39,15 +45,13 @@ public class TestW3schools {
     }
 
     @Test
-    public void alertsSendKeys() throws InterruptedException{
+    public void alertsSendKeys() {
         driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt");
         driver.findElement(By.xpath("//div[@id='accept-choices']")).click();
         driver.switchTo().frame(0);
         driver.findElement(By.xpath("//button[text()='Try it']")).click();
-        Thread.sleep(2000);
         Alert alert = driver.switchTo().alert();
         alert.sendKeys("Jan Kowalski");
-        Thread.sleep(2000);
         alert.accept();
         driver.switchTo().parentFrame();
         System.out.println(driver.getTitle());

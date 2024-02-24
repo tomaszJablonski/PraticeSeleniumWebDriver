@@ -8,7 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -22,6 +25,7 @@ public class TestSalesforceAndSugarcrm {
     public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
     @AfterEach
@@ -54,7 +58,7 @@ public class TestSalesforceAndSugarcrm {
     }
 
     @Test
-    public void printAllOptionInSalesForce1(){
+    public void printAllOptionInSalesForce1() {
         driver.get(SALESFORCE_URL);
         List<WebElement> allTags = driver.findElements(By.name("CompanyEmployees"));
         System.out.println("Total tags are: " + allTags.size());
@@ -66,26 +70,25 @@ public class TestSalesforceAndSugarcrm {
     }
 
     @Test
-    public void handleMultipleWindowsOrSwitchWindows() throws InterruptedException{
+    public void handleMultipleWindowsOrSwitchWindows() {
         driver.get("https://www.sugarcrm.com/uk/?utm_source=sugarcrm.com&utm_medium=referral");
         driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
         driver.findElement(By.xpath("//a[text()='Get A Demo']")).click();
         driver.switchTo().newWindow(WindowType.TAB);
-        driver.get("https://www.sugarcrm.com/uk/?utm_source=sugarcrm.com&utm_medium=referral");
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//a[text()='Get A Demo']")).click();
-        driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
         Set<String> windowHandles = driver.getWindowHandles();
         System.out.println(windowHandles);
         Iterator<String> iterator = windowHandles.iterator();
         String parentWindow = iterator.next();
         String childWindow = iterator.next();
+        driver.switchTo().window(childWindow);
+        driver.get("https://www.sugarcrm.com/uk/?utm_source=sugarcrm.com&utm_medium=referral");
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"menu-item-22271\"]/a/span[1]"))).click();
+        driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
         driver.switchTo().window(parentWindow);
         driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
         driver.switchTo().window(childWindow);
         driver.findElement(By.name("firstname")).sendKeys("Tomasz");
         driver.findElement(By.name("lastname")).sendKeys("Jabłoński");
-        Thread.sleep(5000);
-
     }
 }

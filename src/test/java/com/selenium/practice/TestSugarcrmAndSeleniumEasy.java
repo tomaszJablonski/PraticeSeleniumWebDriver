@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -24,6 +25,7 @@ public class TestSugarcrmAndSeleniumEasy {
     public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
     @AfterEach
@@ -50,7 +52,7 @@ public class TestSugarcrmAndSeleniumEasy {
     }
 
     @Test
-    public void handleDropdownSelectTagAndOptions() throws InterruptedException {
+    public void handleDropdownSelectTagAndOptions() {
         driver.get(sugarcrmUrl);
         driver.findElement(By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll")).click();
         driver.findElement(By.name("email")).sendKeys("tjablonski1990@gmail.com");
@@ -59,67 +61,51 @@ public class TestSugarcrmAndSeleniumEasy {
         WebElement firstOption = selectCompanySize.getFirstSelectedOption();
         System.out.println("firstOption = " + firstOption.getText());
         selectCompanySize.selectByValue("level1");
-        Thread.sleep(2000);
         selectCompanySize.selectByVisibleText("11 - 50 employees");
-        Thread.sleep(2000);
         selectCompanySize.selectByIndex(3);
-        Thread.sleep(2000);
     }
 
     @Test
-    public void handleDropdownSelectDeselectMultipleOption() throws InterruptedException {
+    public void handleDropdownSelectDeselectMultipleOption() {
         driver.get("https://demo.seleniumeasy.com/basic-select-dropdown-demo.html");
         WebElement listBox = driver.findElement(By.id("multi-select"));
         Select multipleOptions = new Select(listBox);
         multipleOptions.selectByVisibleText("California");
-        Thread.sleep(2000);
         multipleOptions.selectByIndex(5);
-        Thread.sleep(2000);
         List<WebElement> allSelectedOptions = multipleOptions.getAllSelectedOptions();
         System.out.println("allSelectedOptions = " + allSelectedOptions.size());
-        Thread.sleep(2000);
         multipleOptions.deselectAll();
-        Thread.sleep(2000);
         multipleOptions.selectByVisibleText("California");
-        Thread.sleep(2000);
         multipleOptions.selectByIndex(5);
-        Thread.sleep(2000);
         multipleOptions.deselectByIndex(5);
-        Thread.sleep(2000);
         List<WebElement> selectedAgain = multipleOptions.getAllSelectedOptions();
         System.out.println("selectedAgain.size() = " + selectedAgain.size());
-        Thread.sleep(2000);
     }
 
     @Test
-    public void checkBox() throws InterruptedException {
+    public void checkBox() {
         driver.get("https://demo.seleniumeasy.com/basic-checkbox-demo.html");
-        Thread.sleep(2000);
         WebElement option1 = driver.findElement(By.xpath("//label[text()='Option 1']"));
         option1.click();
         boolean isSelected = driver.findElement(By.xpath("//div[1]/label/input")).isSelected();
         assertTrue(isSelected);
-        Thread.sleep(2000);
         option1.click();
         Actions actions = new Actions(driver);
         actions.moveToElement(option1);
         actions.perform();
         option1.click();
-        Thread.sleep(2000);
         option1.click();
-        Thread.sleep(2000);
         System.out.println(driver.findElements(By.xpath("//input[@type='checkbox']")).size());
     }
 
     @Test
-    public void radioButton() throws InterruptedException {
+    public void radioButton() {
         driver.get("https://demo.seleniumeasy.com/basic-radiobutton-demo.html");
         WebElement radioSex = driver.findElement(By.xpath("//input[@name='optradio' and @value='Male'] "));
         Actions actions = new Actions(driver);
         actions.moveToElement(radioSex);
         actions.perform();
         radioSex.click();
-        Thread.sleep(2000);
         boolean radioSexIsSelectedMale = radioSex.isSelected();
         assertTrue(radioSexIsSelectedMale);
         System.out.println(driver.findElements(By.xpath("//input[@type='radio']")).size());

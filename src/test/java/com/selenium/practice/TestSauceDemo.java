@@ -28,9 +28,9 @@ public class TestSauceDemo {
 
     @BeforeEach
     void setup() {
-        if (BROWSER.equals("chrome")){
+        if (BROWSER.equals("chrome")) {
             driver = WebDriverManager.chromedriver().create();
-        } else if (BROWSER.equals("edge")){
+        } else if (BROWSER.equals("edge")) {
             driver = WebDriverManager.edgedriver().create();
         }
         driver.manage().window().maximize();
@@ -53,7 +53,7 @@ public class TestSauceDemo {
         driver.findElement(By.id("login-button")).sendKeys(Keys.ENTER);
         boolean logo = driver.findElement(By.cssSelector(".app_logo")).isDisplayed();
         assertTrue(logo, "Swag Labs");
-        List<WebElement> webElementList =  driver.findElements(By.xpath("//div[@class='inventory_item']/div"));
+        List<WebElement> webElementList = driver.findElements(By.xpath("//div[@class='inventory_item']/div"));
         System.out.println(webElementList);
 
         driver.navigate().to("https://sugarcrm.com");

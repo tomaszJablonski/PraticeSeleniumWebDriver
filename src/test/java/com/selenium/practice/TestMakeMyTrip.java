@@ -9,34 +9,32 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
+
 public class TestMakeMyTrip {
 
     WebDriver driver;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
     @AfterEach
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 
     @Test
-    public void handleAutoSuggestionDropdown() throws InterruptedException{
+    public void handleAutoSuggestionDropdown() {
         //sleep is only to see action
         driver.get("https://www.makemytrip.com/");
-        Thread.sleep(2000);
         driver.findElement(By.xpath("//span[text()='From']")).click();
         WebElement from = driver.findElement(By.xpath("//input[@placeholder='From']"));
-        Thread.sleep(2000);
         from.sendKeys("Sydney");
-        Thread.sleep(2000);
         from.sendKeys(Keys.ARROW_DOWN);
-        Thread.sleep(2000);
         from.sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
     }
 }
