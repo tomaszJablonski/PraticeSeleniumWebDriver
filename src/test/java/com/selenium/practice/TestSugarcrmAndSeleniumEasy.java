@@ -111,5 +111,32 @@ public class TestSugarcrmAndSeleniumEasy {
         System.out.println(driver.findElements(By.xpath("//input[@type='radio']")).size());
     }
 
+    @Test
+    public void handleWebTable() {
+        /*
+        Step 1 - Find the table or switch if frame
+        Step 2 - Get the number of rows
+        Step 3 - Get the number of columns
+        Step 4 - Iterate rows and columns and get text and print it
+         */
+        driver.get("https://demo.seleniumeasy.com/table-data-download-demo.html");
+        driver.findElement(By.id("example"));
+        /*
+        number of all rows - //*[@id="example"]/tbody/tr
+        number of all columns - //*[@id="example"]/tbody/tr[1]/td
+         */
+        List<WebElement> rows = driver.findElements(By.xpath("//*[@id=\"example\"]/tbody/tr"));
+        System.out.println("rows = " + rows.size());
+        int rowSize = rows.size();
+        List<WebElement> columns = driver.findElements(By.xpath("//*[@id=\"example\"]/tbody/tr[1]/td"));
+        System.out.println("columns.size() = " + columns.size());
+        int columnSize = columns.size();
 
+        for (int i = 1; i <= rowSize; i++) {
+            for (int j = 1; j <= columnSize; j++) {
+                System.out.print(driver.findElement(By.xpath("//*[@id=\"example\"]/tbody/tr[" + i + "]/td[" + j + "]")).getText() + "           ");
+            }
+            System.out.println();
+        }
+    }
 }
