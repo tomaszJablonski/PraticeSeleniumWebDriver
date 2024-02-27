@@ -1,32 +1,32 @@
 package com.selenium.practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Date;
 
-public class TestEbayAddImplicitWait {
+public class TestEbayAddWaits {
 
     WebDriver driver;
-
-    private final String EBAY_URL = "https://www.ebay.com/";
 
     @BeforeEach
     public void setup() {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
-
+        String EBAY_URL = "https://www.ebay.com/";
+        driver.get(EBAY_URL);
     }
 
     @AfterEach
@@ -38,7 +38,6 @@ public class TestEbayAddImplicitWait {
     public void mouseHover() {
         //Test dotyczy elementów na które najżdżamy myszką
         // i rozwija się coś innego pod nimi
-        driver.get(EBAY_URL);
         WebElement electronicElement = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[4]/a"));
 
         Actions actions = new Actions(driver);
@@ -47,7 +46,6 @@ public class TestEbayAddImplicitWait {
 
     @Test
     public void implicitWaits() {
-        driver.get(EBAY_URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         WebElement motors = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[3]/a"));
         Actions actions = new Actions(driver);
@@ -59,7 +57,6 @@ public class TestEbayAddImplicitWait {
 
     @Test
     public void explicitWait() {
-        driver.get(EBAY_URL);
         WebElement motors = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[3]/a"));
         Actions actions = new Actions(driver);
         actions.moveToElement(motors).perform();
@@ -70,7 +67,6 @@ public class TestEbayAddImplicitWait {
 
     @Test
     public void fluentWait() {
-        driver.get(EBAY_URL);
         WebElement motors = driver.findElement(By.xpath("//*[@id=\"vl-flyout-nav\"]/ul/li[3]/a"));
         Actions actions = new Actions(driver);
         actions.moveToElement(motors).perform();
@@ -83,4 +79,16 @@ public class TestEbayAddImplicitWait {
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//a[text()='Classics']"))).click();
     }
+
+    @Test
+    public void captureScreenshot() throws IOException {
+        Date currentDate = new Date();
+        System.out.println(currentDate);
+        String screenShotCurrentDate = currentDate.toString().replace(" ", "-").replace(":", "-");
+        System.out.println(screenShotCurrentDate);
+
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotFile, new File(".//screenshot/" + screenShotCurrentDate + ".png"));
+    }
+
 }
