@@ -17,11 +17,12 @@ public class TestW3schools {
         driver = WebDriverManager.edgedriver().create();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.manage().deleteAllCookies();
+
     }
 
     @AfterEach
     public void closeBrowser() {
+        driver.manage().deleteAllCookies();
         driver.quit();
     }
 
