@@ -12,10 +12,14 @@ import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestABTesting {
+public class TestTestTheInternet {
 
     Logger logger;
     WebDriver driver;
+
+    public static String username = "admin"; //Reading XLS, CSV
+    public static String password = "admin"; //Reading XLS, CSV
+
 
     @BeforeEach
     void setup() {
@@ -26,7 +30,7 @@ public class TestABTesting {
         driver.manage()
                 .window()
                 .maximize();
-        logger = Logger.getLogger(ABTesting.class.getName());
+        logger = Logger.getLogger(TestTheInternet.class.getName());
 
     }
 
@@ -55,5 +59,15 @@ public class TestABTesting {
         boolean h3 = driver.findElement(By.cssSelector("h3")).isDisplayed();
         assertTrue(h3, "A/B Test Variation 1");
         logger.log(Level.INFO, "The program is over");
+    }
+
+    @Test
+    public void handleAuthenticationPopup(){
+        driver.get("https://the-internet.herokuapp.com/basic_auth");
+        //user and password is admin
+        //First way work in all browser
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+        //or
+        driver.get("https://" + username + ":" + password + "@the-internet.herokuapp.com/basic_auth");
     }
 }
