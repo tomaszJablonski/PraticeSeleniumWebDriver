@@ -1,4 +1,4 @@
-package com.selenium.practice;
+package com.selenium.seleniumJUnit5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +29,6 @@ public class TestMakeMyTrip {
 
     @Test
     public void handleAutoSuggestionDropdown() {
-        //sleep is only to see action
         driver.get("https://www.makemytrip.com/");
         driver.findElement(By.xpath("//span[text()='From']")).click();
         WebElement from = driver.findElement(By.xpath("//input[@placeholder='From']"));

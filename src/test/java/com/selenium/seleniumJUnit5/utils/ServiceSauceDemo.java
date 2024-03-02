@@ -1,4 +1,4 @@
-package com.selenium.practice.utils;
+package com.selenium.seleniumJUnit5.utils;
 
 public class ServiceSauceDemo {
 

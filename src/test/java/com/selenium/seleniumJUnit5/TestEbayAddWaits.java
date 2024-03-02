@@ -1,4 +1,4 @@
-package com.selenium.practice;
+package com.selenium.seleniumJUnit5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
