@@ -1,9 +1,11 @@
 package com.selenium.seleniumTestNG;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 
 public class TestEbayAndBATM {
 
@@ -56,11 +58,36 @@ public class TestEbayAndBATM {
         System.out.println("Logout");
     }
 
-    @Test(priority = 5)
-    public void verifyTitle(){
+    @Test(priority = 5, testName = "Hard Assertion")
+    public void verifyTitleHardAssertion(){
+        //Hard-jak wywali się na pierwszym to już nie pójdzie dalej
         String expectedTitle = "Electronics, Cars, Fashion, Collectibles & More | eBay";
+        String expectedText = "Search";
         driver.get("https://www.ebay.com/");
         String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
+        String actualText = driver.findElement(By.xpath("//input[@value='Search']")).getAttribute("value");
+        System.out.println("Verifying title");
+        Assert.assertEquals(actualTitle, expectedTitle, "This message show when test fail");
+        System.out.println("Verifying text");
+        Assert.assertEquals(actualText, expectedText, "Text verification failed");
+    }
+
+    @Test(priority = 5, testName = "Soft Assertion")
+    public void verifyTitleAndSearchSoftAssertion(){
+        /* Soft - sprawdzi wszystkie asserty i wywali tylko te które faktycznie
+        nie są dobre
+         */
+
+        SoftAssert softAssert = new SoftAssert();
+        String expectedTitle = "Electronics, Cars, Fashion, Collectibles & More | eBay";
+        String expectedText = "Search";
+        driver.get("https://www.ebay.com/");
+        String actualTitle = driver.getTitle();
+        String actualText = driver.findElement(By.xpath("//input[@value='Search']")).getAttribute("value");
+        System.out.println("Verifying title");
+        softAssert.assertEquals(actualTitle, expectedTitle, "This message show when test fail");
+        System.out.println("Verifying text");
+        softAssert.assertEquals(actualText, expectedText, "Text verification failed");
+        softAssert.assertAll();
     }
 }
