@@ -3,7 +3,7 @@
 <suite name="Regression suite">
     <test name="Regression Test">
         <classes>
-            <class name="com.selenium.seleniumTestNG.GroupDemoTest"/>
+            <class name="com.selenium.seleniumTestNG.TestNGAnnotationsTest"/>
         </classes>
     </test>
 </suite>

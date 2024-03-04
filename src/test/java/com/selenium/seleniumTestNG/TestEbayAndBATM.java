@@ -1,5 +1,6 @@
 package com.selenium.seleniumTestNG;
 
+import com.selenium.seleniumTestNG.commons.CommonDataSetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
-public class TestEbayAndBATM {
+public class TestEbayAndBATM extends CommonDataSetup {
 
     //https://testng.org/#_annotations
     //Before/After Test - wykona się tylko raz na początku/końcu

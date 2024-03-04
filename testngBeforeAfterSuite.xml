@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression suite">
-    <test name="Regression Test">
-        <groups>
-            <run>
-                <include name="regression"> </include>
-            </run>
-        </groups>
+<suite name="Suite Setup up and tear down">
+    <test name="Test Before Suit After Suit">
         <classes>
             <class name="com.selenium.seleniumTestNG.TestNGAnnotationsTest" ></class>
         </classes>
