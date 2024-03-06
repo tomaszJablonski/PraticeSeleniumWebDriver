@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Reading browser details from testing xml">
+    <test name="Reading browser details from testing xml">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.selenium.seleniumTestNG.TestPassParameterFromTestNG"></class>
+        </classes>
+    </test>
+</suite>
