@@ -29,6 +29,5 @@ public class SkipDemoTest extends CommonDataSetup {
             System.out.println("Do not execute further steps");
             throw new SkipException("Do not execute further steps");
         }
-
     }
 }

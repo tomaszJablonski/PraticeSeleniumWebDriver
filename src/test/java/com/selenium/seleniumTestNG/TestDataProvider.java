@@ -1,49 +1,49 @@
 package com.selenium.seleniumTestNG;
 
 
-import org.testng.annotations.DataProvider;
+import com.selenium.seleniumTestNG.commons.DateProviders;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestDataProvider {
 
-    @Test(dataProvider = "dataSet")
+    WebDriver driver;
+
+    @BeforeTest
+    public void setup() {
+        driver = WebDriverManager.edgedriver().create();
+        driver.manage().window().maximize();
+    }
+
+    @AfterTest
+    public void closeBrowser() {
+        driver.quit();
+    }
+
+    @Test(dataProvider = "credentials", dataProviderClass = DateProviders.class)
     public void test(String username, String password) {
         System.out.println(username + " " + password);
     }
 
-    @DataProvider
-    public Object[][] dataSet() {
-        Object[][] dataSet = new Object[4][2];
-        //first row
-        dataSet[0][0] = "user1";
-        dataSet[0][1] = "pass1";
-        //second row
-        dataSet[1][0] = "user2";
-        dataSet[1][1] = "pass2";
-        //third row
-        dataSet[2][0] = "user3";
-        dataSet[2][1] = "pass3";
-        //fourth row
-        dataSet[3][0] = "user4";
-        dataSet[3][1] = "pass4";
-
-        return dataSet;
-    }
-
-    @Test(dataProvider = "credentials")
+    @Test(dataProvider = "credentials", dataProviderClass = DateProviders.class)
     public void test1(String username, String password, String test) {
         System.out.println(username + " " + password + " " + test);
     }
 
-    @DataProvider(name = "credentials")
-    public Object[][] dataSet1() {
-
-        return new Object[][]
-                {{"username", "password", "test"},
-                        {"username1", "password1", "test1"},
-                        {"username2", "password2", "test2"}};
+    @Test(dataProvider = "credentials", dataProviderClass = DateProviders.class)
+    public void test2(String username, String password, String test, String message) {
+        System.out.println(username + " " + password + " " + test + " " + message);
     }
 
-
+    @Test(dataProvider = "credentialsSwabLags", dataProviderClass = DateProviders.class)
+    public void sauceLabsLogin(String username, String password) {
+        driver.get("https://www.saucedemo.com/");
+        driver.findElement(By.id("user-name")).sendKeys(username);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("login-button")).click();
+    }
 }
-

@@ -10,8 +10,6 @@ public class TestNGAnnotationsTest extends CommonDataSetup {
 
     WebDriver driver;
 
-
-
     @BeforeClass
     public void beforeClass() {
         System.out.println("Run this before class");
