@@ -1,7 +1,7 @@
-package com.selenium.seleniumTestNG;
+package com.selenium.seleniumTestNG.base;
 
 
-import com.selenium.seleniumTestNG.commons.DateProviders;
+import com.selenium.seleniumTestNG.base.commons.DateProviders;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -3,7 +3,7 @@
 <suite name="Suite Setup up and tear down">
     <test name="Test Before Suit After Suit">
         <classes>
-            <class name="com.selenium.seleniumTestNG.TestNGAnnotationsTest" ></class>
+            <class name="com.selenium.seleniumTestNG.base.TestNGAnnotationsTest" ></class>
         </classes>
     </test>
 </suite>

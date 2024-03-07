@@ -1,4 +1,4 @@
-package com.selenium.seleniumTestNG.commons;
+package com.selenium.seleniumTestNG.base.commons;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

@@ -1,4 +1,4 @@
-package com.selenium.seleniumTestNG;
+package com.selenium.seleniumTestNG.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

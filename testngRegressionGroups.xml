@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.selenium.seleniumTestNG.TestNGAnnotationsTest" ></class>
+            <class name="com.selenium.seleniumTestNG.base.TestNGAnnotationsTest" ></class>
         </classes>
     </test>
 </suite>

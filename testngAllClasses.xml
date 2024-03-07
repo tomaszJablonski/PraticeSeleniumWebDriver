@@ -3,9 +3,9 @@
 <suite name="UI Tests">
     <test name="Functional Test">
         <classes>
-            <class name="com.selenium.seleniumTestNG.TestNGAnnotationsTest"/>
-            <class name="com.selenium.seleniumTestNG.TestEbayAndBATM"/>
-            <class name="com.selenium.seleniumTestNG.SkipDemoTest"></class>
+            <class name="com.selenium.seleniumTestNG.base.TestNGAnnotationsTest"/>
+            <class name="com.selenium.seleniumTestNG.base.TestEbayAndBATM"/>
+            <class name="com.selenium.seleniumTestNG.base.SkipDemoTest"></class>
         </classes>
     </test>
 </suite>
