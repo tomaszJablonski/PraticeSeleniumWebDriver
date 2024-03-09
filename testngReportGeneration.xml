@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Tests">
+    <listeners>
+        <listener class-name="com.selenium.seleniumTestNG.advanced.commons.ListenersAdv"></listener>
+    </listeners>
+    <test name="Report">
+        <classes>
+            <class name="com.selenium.seleniumTestNG.advanced.TestReportGeneration"/>
+        </classes>
+    </test>
+</suite>

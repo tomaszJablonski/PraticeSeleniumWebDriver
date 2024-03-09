@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Method name is - reporterTest1]]>
+    </line>
+    <line>
+      <![CDATA[This is test1]]>
+    </line>
+    <line>
+      <![CDATA[Status of execution is - 1]]>
+    </line>
+    <line>
+      <![CDATA[Method name is - reporterTest2]]>
+    </line>
+    <line>
+      <![CDATA[Status of execution is - 1]]>
+    </line>
+    <line>
+      <![CDATA[Method name is - reporterTest3]]>
+    </line>
+    <line>
+      <![CDATA[Status of execution is - 1]]>
+    </line>
+    <line>
+      <![CDATA[Method name is - reporterTest4]]>
+    </line>
+    <line>
+      <![CDATA[Status of execution is - 1]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-03-09T07:43:32 CET" name="UI Tests" finished-at="2024-03-09T07:43:32 CET" duration-ms="39">
+    <groups>
+    </groups>
+    <test started-at="2024-03-09T07:43:32 CET" name="Report" finished-at="2024-03-09T07:43:32 CET" duration-ms="39">
+      <class name="com.selenium.seleniumTestNG.advanced.TestReportGeneration">
+        <test-method signature="reporterTest1()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest1" finished-at="2024-03-09T07:43:32 CET" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Method name is - reporterTest1]]>
+            </line>
+            <line>
+              <![CDATA[This is test1]]>
+            </line>
+            <line>
+              <![CDATA[Status of execution is - 1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reporterTest1 -->
+        <test-method signature="reporterTest2()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest2" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Method name is - reporterTest2]]>
+            </line>
+            <line>
+              <![CDATA[Status of execution is - 1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reporterTest2 -->
+        <test-method signature="reporterTest3()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest3" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Method name is - reporterTest3]]>
+            </line>
+            <line>
+              <![CDATA[Status of execution is - 1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reporterTest3 -->
+        <test-method signature="reporterTest4()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest4" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Method name is - reporterTest4]]>
+            </line>
+            <line>
+              <![CDATA[Status of execution is - 1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reporterTest4 -->
+      </class> <!-- com.selenium.seleniumTestNG.advanced.TestReportGeneration -->
+    </test> <!-- Report -->
+  </suite> <!-- UI Tests -->
+</testng-results>
