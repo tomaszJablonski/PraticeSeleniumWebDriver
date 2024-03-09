@@ -3,6 +3,7 @@
 <suite name="UI Tests">
     <listeners>
         <listener class-name="com.selenium.seleniumTestNG.advanced.commons.ListenersAdv"></listener>
+        <listener class-name="com.selenium.seleniumTestNG.advanced.commons.RetryListener"></listener>
     </listeners>
     <test name="Listeners">
         <classes>
