@@ -1,18 +1,20 @@
 package com.selenium.seleniumTestNG.advanced;
 
 
+import com.selenium.seleniumTestNG.advanced.commons.BaseClassTest;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class TestReportGeneration extends BaseClassTest{
+public class TestReportGeneration extends BaseClassTest {
 
     @Test
     public void reporterTest1(){
         Reporter.log("This is test1");
-        driver.get("https://www.salesforce.com/eu/?ir=1")
+        driver.get("https://www.salesforce.com/eu/?ir=1");
         System.out.println("This is test1");
         //for take screenshot
-        Assert.assertTrue(fail);
+        Assert.assertTrue(false);
     }
 
     @Test

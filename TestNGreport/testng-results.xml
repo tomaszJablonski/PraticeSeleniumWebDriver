@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Method name is - reporterTest1]]>
@@ -8,7 +8,7 @@
       <![CDATA[This is test1]]>
     </line>
     <line>
-      <![CDATA[Status of execution is - 1]]>
+      <![CDATA[<a href="X:\NAUKA TESTOWANIA\Projekty\PraticeSelenium\src\test\java\com\selenium\seleniumTestNG\advanced\screenshot">Test Results</a>]]>
     </line>
     <line>
       <![CDATA[Method name is - reporterTest2]]>
@@ -29,12 +29,53 @@
       <![CDATA[Status of execution is - 1]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-03-09T07:43:32 CET" name="UI Tests" finished-at="2024-03-09T07:43:32 CET" duration-ms="39">
+  <suite started-at="2024-03-12T18:15:54 CET" name="UI Tests" finished-at="2024-03-12T18:15:55 CET" duration-ms="1163">
     <groups>
     </groups>
-    <test started-at="2024-03-09T07:43:32 CET" name="Report" finished-at="2024-03-09T07:43:32 CET" duration-ms="39">
+    <test started-at="2024-03-12T18:15:54 CET" name="Report" finished-at="2024-03-12T18:15:55 CET" duration-ms="1163">
       <class name="com.selenium.seleniumTestNG.advanced.TestReportGeneration">
-        <test-method signature="reporterTest1()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest1" finished-at="2024-03-09T07:43:32 CET" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:53 CET" name="launchBrowser" finished-at="2024-03-12T18:15:54 CET" duration-ms="1184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="reporterTest1()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:54 CET" name="reporterTest1" finished-at="2024-03-12T18:15:55 CET" duration-ms="995" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at com.selenium.seleniumTestNG.advanced.TestReportGeneration.reporterTest1(TestReportGeneration.java:17)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
               <![CDATA[Method name is - reporterTest1]]>
@@ -43,11 +84,11 @@
               <![CDATA[This is test1]]>
             </line>
             <line>
-              <![CDATA[Status of execution is - 1]]>
+              <![CDATA[<a href="X:\NAUKA TESTOWANIA\Projekty\PraticeSelenium\src\test\java\com\selenium\seleniumTestNG\advanced\screenshot">Test Results</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- reporterTest1 -->
-        <test-method signature="reporterTest2()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest2" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+        <test-method signature="reporterTest2()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:55 CET" name="reporterTest2" finished-at="2024-03-12T18:15:55 CET" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Method name is - reporterTest2]]>
@@ -57,7 +98,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- reporterTest2 -->
-        <test-method signature="reporterTest3()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest3" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+        <test-method signature="reporterTest3()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:55 CET" name="reporterTest3" finished-at="2024-03-12T18:15:55 CET" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Method name is - reporterTest3]]>
@@ -67,7 +108,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- reporterTest3 -->
-        <test-method signature="reporterTest4()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@77167fb7]" started-at="2024-03-09T07:43:32 CET" name="reporterTest4" finished-at="2024-03-09T07:43:32 CET" duration-ms="0" status="PASS">
+        <test-method signature="reporterTest4()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:55 CET" name="reporterTest4" finished-at="2024-03-12T18:15:55 CET" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Method name is - reporterTest4]]>
@@ -77,6 +118,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- reporterTest4 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.selenium.seleniumTestNG.advanced.TestReportGeneration@69b2283a]" started-at="2024-03-12T18:15:55 CET" name="closeBrowser" finished-at="2024-03-12T18:15:56 CET" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.selenium.seleniumTestNG.advanced.TestReportGeneration -->
     </test> <!-- Report -->
   </suite> <!-- UI Tests -->

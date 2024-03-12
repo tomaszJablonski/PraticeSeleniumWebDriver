@@ -9,8 +9,10 @@ import org.testng.Reporter;
 import java.io.IOException;
 
 public class ListenersAdv extends CaptureScreenShoot implements ITestListener {
+
     @Override
     public void onTestStart(ITestResult result) {
+        System.setProperty("org.uncommons.reportng.title","Testing Listeners");
         Reporter.log("Method name is - " + result.getName());
         System.out.println("Test case is started");
     }
@@ -28,7 +30,7 @@ public class ListenersAdv extends CaptureScreenShoot implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Reporter.log("<a href=\"tutaj lokalizacje wkleić z folderu screenshot">Test result</a>");
+        Reporter.log("X:\\NAUKA TESTOWANIA\\Projekty\\PraticeSelenium\\src\\test\\java\\com\\selenium\\seleniumTestNG\\advanced\\screenshot\\" + getScreenShotCurrentDate() + ".png");
     }
 
     @Override

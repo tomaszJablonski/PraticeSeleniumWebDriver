@@ -11,12 +11,18 @@ import java.util.Date;
 
 public class CaptureScreenShoot extends BaseClassTest {
 
+    String screenShotCurrentDate;
+
     public void screenShoot() throws IOException {
         Date currentDate = new Date();
-        String screenShotCurrentDate = currentDate.toString().replace(" ", "-").replace(":", "-");
+        screenShotCurrentDate = currentDate.toString().replace(" ", "-").replace(":", "-");
         System.out.println(screenShotCurrentDate);
 
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenshotFile, new File("./src/test/java/com/selenium/seleniumTestNG/advanced/screenshot/" + screenShotCurrentDate + ".png"));
+    }
+
+    public String getScreenShotCurrentDate() {
+        return screenShotCurrentDate;
     }
 }
