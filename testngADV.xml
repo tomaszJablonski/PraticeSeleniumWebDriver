@@ -8,8 +8,9 @@
     </listeners>
     <test name="Listeners">
         <classes>
-            <class name="com.selenium.seleniumTestNG.advanced.TestClassListenerDemo"/>
-            <class name="com.selenium.seleniumTestNG.advanced.TestReportGeneration"/>
+<!--            <class name="com.selenium.seleniumTestNG.advanced.TestClassListenerDemo"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.advanced.TestReportGeneration"/>-->
+            <class name="com.selenium.seleniumTestNG.advanced.TestDependency"/>
         </classes>
     </test>
 </suite>
