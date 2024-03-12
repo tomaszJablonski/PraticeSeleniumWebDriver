@@ -28,7 +28,7 @@ public class ListenersAdv extends CaptureScreenShoot implements ITestListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Reporter.log("<a href=\"tutaj lokalizacje wkleić">Test result</a>");
+        Reporter.log("<a href=\"tutaj lokalizacje wkleić z folderu screenshot">Test result</a>");
     }
 
     @Override

@@ -4,12 +4,15 @@ package com.selenium.seleniumTestNG.advanced;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-public class TestReportGeneration {
+public class TestReportGeneration extends BaseClassTest{
 
     @Test
     public void reporterTest1(){
         Reporter.log("This is test1");
+        driver.get("https://www.salesforce.com/eu/?ir=1")
         System.out.println("This is test1");
+        //for take screenshot
+        Assert.assertTrue(fail);
     }
 
     @Test

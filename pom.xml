@@ -52,5 +52,14 @@
             <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.sdrss/reportng -->
+<dependency>
+    <groupId>com.github.sdrss</groupId>
+    <artifactId>reportng</artifactId>
+    <version>2.7.0</version>
+    <scope>test</scope>
+</dependency>
+
+
     </dependencies>
 </project>
