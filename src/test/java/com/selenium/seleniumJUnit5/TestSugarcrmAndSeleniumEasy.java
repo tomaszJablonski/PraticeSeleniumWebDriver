@@ -1,5 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
+import com.selenium.seleniumJUnit5.common.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,24 +16,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestSugarcrmAndSeleniumEasy {
-
-    WebDriver driver;
+public class TestSugarcrmAndSeleniumEasy extends BaseClass {
 
     private final String sugarcrmUrl = "https://www.sugarcrm.com/uk/request-demo/";
-
-    @BeforeEach
-    public void setup() {
-        driver = WebDriverManager.edgedriver().create();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-    }
-
-    @AfterEach
-    public void closeBrowser() {
-        driver.quit();
-    }
-
     @Test
     public void webDriverMethods() {
         driver.get(sugarcrmUrl);

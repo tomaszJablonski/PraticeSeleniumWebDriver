@@ -1,5 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
+import com.selenium.seleniumJUnit5.common.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,21 +12,7 @@ import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 
-public class TestMakeMyTrip {
-
-    WebDriver driver;
-
-    @BeforeEach
-    public void setup() {
-        driver = WebDriverManager.edgedriver().create();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-    }
-
-    @AfterEach
-    public void closeBrowser() {
-        driver.quit();
-    }
+public class TestMakeMyTrip extends BaseClass {
 
     @Test
     public void handleAutoSuggestionDropdown() {

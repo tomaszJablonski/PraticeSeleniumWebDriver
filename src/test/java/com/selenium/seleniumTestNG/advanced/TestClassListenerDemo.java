@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TestClassListenerDemo extends BaseClassTest {
 
     //Retry for simple class use in Test
-    //For retry for all tests use Listeners in testngReportGeneration.xml
+    //For retry for all tests use Listeners in testngADV.xml
     @Test(retryAnalyzer = Retry.class)
     public void launchApp(){
         driver.get("https://www.ebay.com/");

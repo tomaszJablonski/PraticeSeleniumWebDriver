@@ -1,11 +1,8 @@
 package com.selenium.seleniumJUnit5;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.selenium.seleniumJUnit5.common.BaseClass;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,22 +13,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class TestSalesforceAndSugarcrm {
-
-    WebDriver driver;
+public class TestSalesforceAndSugarcrm extends BaseClass {
     private final String SALESFORCE_URL = "https://www.salesforce.com/eu/form/starter/overview-demo/?d=pb";
-
-    @BeforeEach
-    public void setup() {
-        driver = WebDriverManager.edgedriver().create();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-    }
-
-    @AfterEach
-    public void closeBrowser() {
-        driver.quit();
-    }
 
     @Test
     public void printAllLinksOfAWebpageSugarcrm() {

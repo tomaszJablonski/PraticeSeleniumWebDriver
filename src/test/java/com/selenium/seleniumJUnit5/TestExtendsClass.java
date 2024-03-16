@@ -1,36 +1,19 @@
 package com.selenium.seleniumJUnit5;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.selenium.seleniumJUnit5.common.BaseClass;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public class TestExtendsClass {
-
-    WebDriver driver;
-
-    @BeforeEach
-    public void setup() {
-        driver = WebDriverManager.edgedriver().create();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-
-    }
-
-    @AfterEach
-    public void closeBrowser() {
-        driver.quit();
-    }
+public class TestExtendsClass extends BaseClass {
 
     @Test
     public void performKeyboardEvents() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.get("https://extendsclass.com/text-compare.html");
         WebElement areaText1 = driver.findElement(By.xpath("//*[@id=\"dropZone\"]/div[2]/div/div[6]/div[1]/div/div/div/div[1]"));
         Actions actions = new Actions(driver);
@@ -40,5 +23,4 @@ public class TestExtendsClass {
         WebElement areaTest2 = driver.findElement(By.xpath("//*[@id=\"dropZone2\"]/div[2]/div/div[6]/div[1]/div/div/div/div[5]"));
         actions.keyDown(areaTest2, Keys.CONTROL).sendKeys("a").sendKeys("v").build().perform();
     }
-
 }

@@ -1,30 +1,13 @@
 package com.selenium.seleniumJUnit5;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.selenium.seleniumJUnit5.common.BaseClass;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
-import java.time.Duration;
-
-public class TestW3schools {
-
-    WebDriver driver;
-
-    @BeforeEach
-    public void setup() {
-        driver = WebDriverManager.edgedriver().create();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-
-    }
-
-    @AfterEach
-    public void closeBrowser() {
-        driver.manage().deleteAllCookies();
-        driver.quit();
-    }
+public class TestW3schools extends BaseClass {
 
     @Test
     public void framesByIndexAndAlertsPopup() {
@@ -54,7 +37,6 @@ public class TestW3schools {
         alert.accept();
         driver.switchTo().parentFrame();
         System.out.println(driver.getTitle());
-
     }
 
     @Test

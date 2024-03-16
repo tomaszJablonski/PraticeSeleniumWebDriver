@@ -1,6 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.utils.ServiceSauceDemo;
+import com.selenium.seleniumJUnit5.common.ServiceSauceDemo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
