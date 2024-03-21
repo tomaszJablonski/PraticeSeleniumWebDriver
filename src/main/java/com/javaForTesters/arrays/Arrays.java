@@ -1,4 +1,4 @@
-package com.javaForTesters;
+package com.javaForTesters.arrays;
 
 public class Arrays{
     public static void main(String[] args) {

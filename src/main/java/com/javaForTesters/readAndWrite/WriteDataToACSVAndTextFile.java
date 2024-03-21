@@ -1,4 +1,4 @@
-package com.javaForTesters;
+package com.javaForTesters.readAndWrite;
 
 import java.io.BufferedWriter;
 import java.io.File;

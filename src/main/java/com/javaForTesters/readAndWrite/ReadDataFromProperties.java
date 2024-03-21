@@ -1,4 +1,4 @@
-package com.javaForTesters;
+package com.javaForTesters.readAndWrite;
 
 import java.io.FileInputStream;
 import java.io.FileReader;
