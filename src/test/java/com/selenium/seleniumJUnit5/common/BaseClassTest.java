@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
-public class BaseClass {
+public class BaseClassTest {
 
     public static WebDriver driver = null;
 

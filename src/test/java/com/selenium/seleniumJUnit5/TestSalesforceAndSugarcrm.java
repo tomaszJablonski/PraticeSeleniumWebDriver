@@ -1,6 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class TestSalesforceAndSugarcrm extends BaseClass {
+public class TestSalesforceAndSugarcrm extends BaseClassTest {
     private final String SALESFORCE_URL = "https://www.salesforce.com/eu/form/starter/overview-demo/?d=pb";
 
     @Test

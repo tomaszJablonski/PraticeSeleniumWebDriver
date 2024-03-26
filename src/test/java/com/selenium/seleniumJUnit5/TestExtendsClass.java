@@ -1,6 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public class TestExtendsClass extends BaseClass {
+public class TestExtendsClass extends BaseClassTest {
 
     @Test
     public void performKeyboardEvents() {

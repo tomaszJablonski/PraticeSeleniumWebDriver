@@ -1,18 +1,12 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.time.Duration;
-
-public class TestMakeMyTrip extends BaseClass {
+public class TestMakeMyTrip extends BaseClassTest {
 
     @Test
     public void handleAutoSuggestionDropdown() {

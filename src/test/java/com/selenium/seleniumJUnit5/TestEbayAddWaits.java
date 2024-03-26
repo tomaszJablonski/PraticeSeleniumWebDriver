@@ -1,6 +1,6 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Date;
 
-public class TestEbayAddWaits extends BaseClass {
+public class TestEbayAddWaits extends BaseClassTest {
 
     public static final String EBAY_URL = "https://www.ebay.com/";
 

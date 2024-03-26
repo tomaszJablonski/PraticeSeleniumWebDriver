@@ -1,22 +1,17 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import java.time.Duration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestSugarcrmAndSeleniumEasy extends BaseClass {
+public class TestSugarcrmAndSeleniumEasy extends BaseClassTest {
 
     private final String sugarcrmUrl = "https://www.sugarcrm.com/uk/request-demo/";
     @Test

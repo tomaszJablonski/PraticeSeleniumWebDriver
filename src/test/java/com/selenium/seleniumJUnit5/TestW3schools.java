@@ -1,13 +1,13 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-public class TestW3schools extends BaseClass {
+public class TestW3schools extends BaseClassTest {
 
     @Test
     public void framesByIndexAndAlertsPopup() {

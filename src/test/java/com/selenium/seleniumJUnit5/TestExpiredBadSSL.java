@@ -1,9 +1,9 @@
 package com.selenium.seleniumJUnit5;
 
-import com.selenium.seleniumJUnit5.common.BaseClass;
+import com.selenium.seleniumJUnit5.common.BaseClassTest;
 import org.junit.jupiter.api.Test;
 
-public class TestExpiredBadSSL extends BaseClass {
+public class TestExpiredBadSSL extends BaseClassTest {
 
     // edgeOptions.setAcceptInsecureCerts(true); in base class
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression suite">
+    <test name="Regression Test">
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="user" value="tjablonski1990@gmail.com"></parameter>
+        <parameter name="password" value="Test123test#"></parameter>
+        <classes>
+            <class name="com.selenium.seleniumFramework.testCase.LoginTest"/>
+        </classes>
+    </test>
+</suite>
