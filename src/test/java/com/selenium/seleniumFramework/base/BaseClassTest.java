@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -35,7 +33,7 @@ public class BaseClassTest {
     }
 
     @Parameters({"browser"})
-    @BeforeTest
+    @BeforeMethod
     public void setup(String browser) throws IOException {
         switch (browser) {
             case "edge":
@@ -56,7 +54,7 @@ public class BaseClassTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     }
 
-    @AfterTest
+    @AfterMethod
     public void quit() {
         driver.quit();
     }

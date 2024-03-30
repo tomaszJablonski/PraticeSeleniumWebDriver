@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Regression_suite" class="navigator-link">
+              <span class="suite-name border-failed">Regression suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Regression_suite" class="navigator-link ">
+                    <span>X:\NAUKA TESTOWANIA\Projekty\PraticeSelenium\testngSeleniumFramework.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Regression_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Regression_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Regression_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Regression_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Regression_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Regression_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Regression_suite" class="hide-methods failed suite-Regression_suite"> (hide)</a> <!-- hide-methods failed suite-Regression_suite -->
+                      <a href="#" panel-name="suite-Regression_suite" class="show-methods failed suite-Regression_suite"> (show)</a> <!-- show-methods failed suite-Regression_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Regression_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_suite" title="com.selenium.seleniumFramework.testCase.LoginTest" class="method navigator-link" hash-for-method="loginToZoho3(tjablonskiasdom, Test123testqwe#)">loginToZoho3(tjablonskiasdom, Test123testqwe#)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_suite" title="com.selenium.seleniumFramework.testCase.LoginTest" class="method navigator-link" hash-for-method="loginToZoho3(tjablonski1990@gmaidwel.com, Test1asdwe23test#)">loginToZoho3(tjablonski1990@gmaidwel.com, Test1asdwe23test#)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_suite" title="com.selenium.seleniumFramework.testCase.LoginTest" class="method navigator-link" hash-for-method="loginToZoho3(tjablonski199assl.com, Test12wdfv3test#)">loginToZoho3(tjablonski199assl.com, Test12wdfv3test#)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Regression_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Regression_suite" class="hide-methods passed suite-Regression_suite"> (hide)</a> <!-- hide-methods passed suite-Regression_suite -->
+                      <a href="#" panel-name="suite-Regression_suite" class="show-methods passed suite-Regression_suite"> (show)</a> <!-- show-methods passed suite-Regression_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Regression_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_suite" title="com.selenium.seleniumFramework.testCase.LoginTest" class="method navigator-link" hash-for-method="loginToZoho3(tjablonski1990@gmail.com, Test123test#)">loginToZoho3(tjablonski1990@gmail.com, Test123test#)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Regression_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Regression_suite" class="panel Regression_suite">
+          <div class="suite-Regression_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.selenium.seleniumFramework.testCase.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToZoho3(tjablonskiasdom, Test123testqwe#)">
+                  </a> <!-- loginToZoho3(tjablonskiasdom, Test123testqwe#) -->
+                  <span class="method-name">loginToZoho3</span>
+                  <span class="parameters">(tjablonskiasdom,Test123testqwe#)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=123.0.2420.65)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [110c57b9f40ba66f9041441f8f82b1b4, sendKeysToElement {id=f.579884E475847F6DA76BAA7D1B34B6E4.d.742EBA36F60D92DA887E5B848407850C.e.13, value=[Ljava.lang.CharSequence;@44ea608c}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59878}, msedge: {msedgedriverVersion: 123.0.2420.65 (49b6a5859239..., userDataDir: C:\Users\tjabl\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59878/devtoo..., se:cdpVersion: 123.0.2420.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (110c57b9f40ba66f9041441f8f82b1b4)] -&gt; id: password]
+Session ID: 110c57b9f40ba66f9041441f8f82b1b4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.selenium.seleniumFramework.base.BaseClassTest.loginInToZohoProperties(BaseClassTest.java:75)
+	at com.selenium.seleniumFramework.testCase.LoginTest.loginToZoho3(LoginTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToZoho3(tjablonski1990@gmaidwel.com, Test1asdwe23test#)">
+                  </a> <!-- loginToZoho3(tjablonski1990@gmaidwel.com, Test1asdwe23test#) -->
+                  <span class="method-name">loginToZoho3</span>
+                  <span class="parameters">(tjablonski1990@gmaidwel.com,Test1asdwe23test#)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=123.0.2420.65)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [3d3baf3236dcdbbc884a1ab22a9f739a, sendKeysToElement {id=f.836D2AD75736EE6FD08978D009FCA2AD.d.9FC0CE4FC94AB22A9EEE2BB29C75C255.e.13, value=[Ljava.lang.CharSequence;@4fe875be}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60008}, msedge: {msedgedriverVersion: 123.0.2420.65 (49b6a5859239..., userDataDir: C:\Users\tjabl\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60008/devtoo..., se:cdpVersion: 123.0.2420.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (3d3baf3236dcdbbc884a1ab22a9f739a)] -&gt; id: password]
+Session ID: 3d3baf3236dcdbbc884a1ab22a9f739a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.selenium.seleniumFramework.base.BaseClassTest.loginInToZohoProperties(BaseClassTest.java:75)
+	at com.selenium.seleniumFramework.testCase.LoginTest.loginToZoho3(LoginTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToZoho3(tjablonski199assl.com, Test12wdfv3test#)">
+                  </a> <!-- loginToZoho3(tjablonski199assl.com, Test12wdfv3test#) -->
+                  <span class="method-name">loginToZoho3</span>
+                  <span class="parameters">(tjablonski199assl.com,Test12wdfv3test#)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=123.0.2420.65)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [cec9f895da634d6782204d72a581fe01, sendKeysToElement {id=f.9395E56817CA92904AA35FF56DB581EC.d.63A0DA779FB02B56754FC7AD62FCE235.e.13, value=[Ljava.lang.CharSequence;@9f6e406}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59945}, msedge: {msedgedriverVersion: 123.0.2420.65 (49b6a5859239..., userDataDir: C:\Users\tjabl\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59945/devtoo..., se:cdpVersion: 123.0.2420.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (cec9f895da634d6782204d72a581fe01)] -&gt; id: password]
+Session ID: cec9f895da634d6782204d72a581fe01
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.selenium.seleniumFramework.base.BaseClassTest.loginInToZohoProperties(BaseClassTest.java:75)
+	at com.selenium.seleniumFramework.testCase.LoginTest.loginToZoho3(LoginTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_suite-class-failed -->
+          <div class="suite-Regression_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.selenium.seleniumFramework.testCase.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginToZoho3(tjablonski1990@gmail.com, Test123test#)">
+                  </a> <!-- loginToZoho3(tjablonski1990@gmail.com, Test123test#) -->
+                  <span class="method-name">loginToZoho3</span>
+                  <span class="parameters">(tjablonski1990@gmail.com,Test123test#)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_suite-class-passed -->
+        </div> <!-- panel Regression_suite -->
+        <div panel-name="test-xml-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">X:\NAUKA TESTOWANIA\Projekty\PraticeSelenium\testngSeleniumFramework.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Regression suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression Test&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Test123test#&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;tjablonski1990@gmail.com&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.selenium.seleniumFramework.testCase.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Regression Test --&gt;
+&lt;/suite&gt; &lt;!-- Regression suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Regression suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Regression Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Regression suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Regression suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Regression_suite');
+function tableData_Regression_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginToZoho3')
+data.setCell(0, 2, 'com.selenium.seleniumFramework.testCase.LoginTest')
+data.setCell(0, 3, 3709);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginToZoho3')
+data.setCell(1, 2, 'com.selenium.seleniumFramework.testCase.LoginTest')
+data.setCell(1, 3, 3675);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginToZoho3')
+data.setCell(2, 2, 'com.selenium.seleniumFramework.testCase.LoginTest')
+data.setCell(2, 3, 3666);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginToZoho3')
+data.setCell(3, 2, 'com.selenium.seleniumFramework.testCase.LoginTest')
+data.setCell(3, 3, 3653);
+window.suiteTableData['Regression_suite']= { tableData: data, tableDiv: 'times-div-Regression_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <div id="times-div-Regression_suite">
+              </div> <!-- times-div-Regression_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Regression suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.selenium.seleniumFramework.testCase.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginToZoho</span>
+                <br/>
+                <span class="ignored-method-name">loginToZoho2</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Regression_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.selenium.seleniumFramework.testCase.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginToZoho3(tjablonskiasdom, Test123testqwe#)</span>
+                <span class="method-start">3483 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">7163 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">8392 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginToZoho3(tjablonski199assl.com, Test12wdfv3test#)</span>
+                <span class="method-start">11601 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">15268 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">16501 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginToZoho3(tjablonski1990@gmaidwel.com, Test1asdwe23test#)</span>
+                <span class="method-start">19292 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">23002 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">24186 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginToZoho3(tjablonski1990@gmail.com, Test123test#)</span>
+                <span class="method-start">26979 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit</span>
+                <span class="method-start">30633 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
