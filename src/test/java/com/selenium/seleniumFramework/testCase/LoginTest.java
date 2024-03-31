@@ -1,6 +1,7 @@
 package com.selenium.seleniumFramework.testCase;
 
 import com.selenium.seleniumFramework.base.BaseClassTest;
+import com.selenium.seleniumFramework.utilites.ReadXLSData;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -30,7 +31,7 @@ public class LoginTest extends BaseClassTest {
     }
 
     //Data Driven Testing
-    @Test(dataProvider = "test data Login")
+    @Test(enabled = false,dataProvider = "test data Login")
     public void loginToZoho3(String user, String password) {
         driver.findElement(By.xpath(propertiesLocators.getProperty("sign_in"))).click();
         loginInToZohoProperties(user, password);
@@ -38,6 +39,7 @@ public class LoginTest extends BaseClassTest {
         Assert.assertTrue(viewSite);
     }
 
+    //only for training hard coding - not recommended
     @DataProvider(name = "test data Login")
     public Object[][] testDataLogin() {
         return new Object[][]
@@ -47,5 +49,14 @@ public class LoginTest extends BaseClassTest {
                         {"tjablonski1990@gmaidwel.com", "Test1asdwe23test#"},
                         {"tjablonski1990@gmail.com", "Test123test#"}
                 };
+    }
+
+    //right test for Login !!!
+    @Test(dataProviderClass = ReadXLSData.class, dataProvider = "Data Login from Xls")
+    public void loginToZoho4(String user, String password) {
+        driver.findElement(By.xpath(propertiesLocators.getProperty("sign_in"))).click();
+        loginInToZohoProperties(user, password);
+        boolean viewSite = driver.findElement(By.xpath(propertiesLocators.getProperty("viewSite"))).isDisplayed();
+        Assert.assertTrue(viewSite);
     }
 }

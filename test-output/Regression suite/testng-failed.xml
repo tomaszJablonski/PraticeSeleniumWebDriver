@@ -8,7 +8,7 @@
     <classes>
       <class name="com.selenium.seleniumFramework.testCase.LoginTest">
         <methods>
-          <include name="loginToZoho3" invocation-numbers="0 1 2"/>
+          <include name="loginToZoho4" invocation-numbers="0 1 2"/>
           <include name="setup"/>
           <include name="quit"/>
         </methods>
