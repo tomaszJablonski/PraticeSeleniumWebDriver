@@ -16,7 +16,6 @@ public class CucumberBaseTest {
 
     public static WebDriver driver = null;
 
-
     public static String browser = "edge";
 
     //locators

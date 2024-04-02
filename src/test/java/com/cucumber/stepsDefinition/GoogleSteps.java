@@ -1,5 +1,6 @@
 package com.cucumber.stepsDefinition;
 
+import com.cucumber.utils.CucumberBaseTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,13 +8,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class GoogleSteps {
-
-    WebDriver driver;
+public class GoogleSteps extends CucumberBaseTest {
 
     @Given("I am on the Google search page")
     public void i_am_on_the_google_search_page() {
