@@ -18,8 +18,9 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.18.1</version>
+            <version>4.19.1</version>
         </dependency>
+        <!--testng-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -38,6 +39,7 @@
             <version>2.7.0</version>
             <scope>test</scope>
         </dependency>
+        <!--apache-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -73,21 +75,49 @@
             <artifactId>log4j-api</artifactId>
             <version>3.0.0-beta2</version>
         </dependency>
+        <!--webdrivermanager-->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.7.0</version>
         </dependency>
+        <!--junit-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
+        <!--cucumber-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.16.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>28.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.16.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>1</id>>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>

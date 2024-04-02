@@ -6,13 +6,13 @@
     <parameter name="browser" value="edge"/>
     <parameter name="user" value="tjablonski1990@gmail.com"/>
     <classes>
-      <class name="com.selenium.seleniumFramework.testCase.LoginTest">
+      <class name="com.selenium.seleniumFramework.testCase.LoginTestSteps">
         <methods>
           <include name="loginToZoho4" invocation-numbers="0 1 2"/>
           <include name="setup"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- com.selenium.seleniumFramework.testCase.LoginTest -->
+      </class> <!-- com.selenium.seleniumFramework.testCase.LoginTestSteps -->
     </classes>
   </test> <!-- Regression Test(failed) -->
 </suite> <!-- Failed suite [Regression suite] -->
