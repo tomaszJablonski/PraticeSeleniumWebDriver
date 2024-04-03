@@ -29,7 +29,6 @@ public class GooglePageElements {
 
     //methods
 
-
     public void clickOnAcceptAll() {
         acceptAll.click();
     }

@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/com/cucumber/features/test1.feature",
+        features = "src/test/java/com/cucumber/features/googleTest.feature",
         glue = "com.cucumber.stepsDefinition"
 )
-public class TestRunnerWip{
+public class TestRunnerGoogle {
 }

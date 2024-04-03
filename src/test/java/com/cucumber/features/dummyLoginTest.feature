@@ -4,13 +4,14 @@ Feature: Login Test
     Given I am on the customer login page
     When I provide valid login credentials
     And I click on login button
-    Then I should be redirect to home page
+    And I should be redirect to home page
+    Then I close the browser dummy
 
 
   Scenario Outline: Outline dummy test
     Given My name is "<name>"
     When My surname is "<surname>"
-    And I live in "<country>"
+    Then I live in "<country>"
 
     Examples:
       | name   | surname | country |

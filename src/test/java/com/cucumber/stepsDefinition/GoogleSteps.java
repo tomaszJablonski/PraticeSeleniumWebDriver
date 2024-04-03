@@ -56,6 +56,10 @@ public class GoogleSteps {
     @Then("I should be redirect to search results page")
     public void i_should_be_redirect_to_search_results_page() {
         googlePage.isWikipediaVisible();
+    }
+
+    @Then("I close the browser")
+    public void iCloseTheBrowser() {
         googlePage.closeBrowser();
     }
 }
