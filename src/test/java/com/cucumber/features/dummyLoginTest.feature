@@ -7,7 +7,7 @@ Feature: Login Test
     Then I should be redirect to home page
 
 
-  Scenario Outline:
+  Scenario Outline: Outline dummy test
     Given My name is "<name>"
     When My surname is "<surname>"
     And I live in "<country>"
