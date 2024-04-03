@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         features = "src/test/java/com/cucumber/features/test1.feature",
         glue = "com.cucumber.stepsDefinition"
 )
-public class TestRunnerWip {
+public class TestRunnerWip{
 }
