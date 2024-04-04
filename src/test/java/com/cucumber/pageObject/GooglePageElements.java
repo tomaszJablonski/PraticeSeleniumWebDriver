@@ -1,5 +1,6 @@
 package com.cucumber.pageObject;
 
+import com.cucumber.utils.WaitHelper;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +12,12 @@ public class GooglePageElements {
 
     public WebDriver webDriver;
 
+    public WaitHelper waitHelper;
+
     public GooglePageElements(WebDriver driver) {
         webDriver = driver;
         PageFactory.initElements(driver, this);
+        waitHelper = new WaitHelper(driver);
     }
 
     //locators
@@ -30,6 +34,7 @@ public class GooglePageElements {
     //methods
 
     public void clickOnAcceptAll() {
+        waitHelper.WaitForElement(acceptAll);
         acceptAll.click();
     }
 

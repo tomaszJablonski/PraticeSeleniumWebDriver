@@ -1,0 +1,5 @@
+2024-04-04 20:23:17,075 - Google -INFO - I launch Edge browser
+2024-04-04 20:23:17,093 - Google -INFO - I launch url https://www.google.pl/
+2024-04-04 20:23:17,685 - Google -INFO - I click to search and write keyword
+2024-04-04 20:23:17,772 - Google -INFO - I click on search button
+2024-04-04 20:23:17,897 - Google -INFO - I check the redirect is correct
