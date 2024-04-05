@@ -3,3 +3,79 @@
 2024-04-04 20:23:17,685 - Google -INFO - I click to search and write keyword
 2024-04-04 20:23:17,772 - Google -INFO - I click on search button
 2024-04-04 20:23:17,897 - Google -INFO - I check the redirect is correct
+2024-04-05 17:59:43,040 - Google -INFO - I launch Edge browser
+2024-04-05 17:59:43,063 - Google -INFO - I launch url https://www.google.pl/
+2024-04-05 17:59:43,687 - Google -INFO - I click to search and write keyword
+2024-04-05 17:59:43,779 - Google -INFO - I click on search button
+2024-04-05 17:59:43,920 - Google -INFO - I check the redirect is correct
+2024-04-05 18:01:44,669 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:01:44,687 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:01:45,279 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:01:45,365 - Testing Google site -INFO - I click on search button
+2024-04-05 18:01:45,512 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:03:16,598 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:03:16,617 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:03:17,211 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:03:17,301 - Testing Google site -INFO - I click on search button
+2024-04-05 18:03:17,449 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:06:51,243 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:06:51,263 - Testing Google site -INFO - I launch url https://www.gmail.pl/
+2024-04-05 18:07:15,451 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:07:15,469 - Testing Google site -INFO - I launch url https://www.gmail.pl/
+2024-04-05 18:08:59,064 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:09:31,503 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:13:49,766 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:16:34,000 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:16:34,018 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:16:34,728 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:16:36,344 - Testing Google site -INFO - I close the browser
+2024-04-05 18:16:56,789 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:16:56,808 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:16:57,390 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:16:57,480 - Testing Google site -INFO - I click on search button
+2024-04-05 18:16:57,641 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:16:59,569 - Testing Google site -INFO - I close the browser
+2024-04-05 18:17:00,172 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:17:00,176 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:17:01,331 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:17:02,449 - Testing Google site -INFO - I close the browser
+2024-04-05 18:19:58,159 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:19:58,179 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:19:58,810 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:19:58,901 - Testing Google site -INFO - I click on search button
+2024-04-05 18:19:59,065 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:20:01,085 - Testing Google site -INFO - I close the browser
+2024-04-05 18:20:41,457 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:20:41,475 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:20:42,963 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:20:44,172 - Testing Google site -INFO - I close the browser
+2024-04-05 18:23:25,244 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:23:25,262 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:23:25,956 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:23:26,050 - Testing Google site -INFO - I click on search button
+2024-04-05 18:23:26,201 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:23:28,053 - Testing Google site -INFO - I close the browser
+2024-04-05 18:23:28,664 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:23:28,668 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:23:29,542 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:23:30,746 - Testing Google site -INFO - I close the browser
+2024-04-05 18:24:53,617 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:24:53,634 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:24:54,282 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:24:54,382 - Testing Google site -INFO - I click on search button
+2024-04-05 18:24:54,534 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:24:56,463 - Testing Google site -INFO - I close the browser
+2024-04-05 18:24:57,042 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:24:57,044 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:24:58,541 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:24:59,746 - Testing Google site -INFO - I close the browser
+2024-04-05 18:25:08,507 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:25:08,525 - Testing Google site -INFO - I launch url https://www.google.pl/
+2024-04-05 18:25:09,158 - Testing Google site -INFO - I click to search and write keyword
+2024-04-05 18:25:09,252 - Testing Google site -INFO - I click on search button
+2024-04-05 18:25:09,401 - Testing Google site -INFO - I check the redirect is correct
+2024-04-05 18:25:11,345 - Testing Google site -INFO - I close the browser
+2024-04-05 18:25:11,896 - Testing Google site -INFO - I launch Edge browser
+2024-04-05 18:25:11,899 - Testing Google site -INFO - I launch url https://www.gmail.com/
+2024-04-05 18:25:12,832 - Testing Google site -INFO - I check the gmail is visible
+2024-04-05 18:25:14,019 - Testing Google site -INFO - I close the browser

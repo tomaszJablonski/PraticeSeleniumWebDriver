@@ -31,6 +31,9 @@ public class GooglePageElements {
     @FindBy(xpath = "//*[@id=\"L2AGLb\"]/div")
     public WebElement acceptAll;
 
+    @FindBy(xpath = "//div[text()='Adres e-mail lub telefon']")
+    public WebElement emailLoginAddressAndPhone;
+
     //methods
 
     public void clickOnAcceptAll() {
@@ -49,10 +52,10 @@ public class GooglePageElements {
 
     public void isWikipediaVisible() {
         Assertions.assertTrue(wikipediaTree.isDisplayed());
-        webDriver.quit();
     }
 
-    public void closeBrowser() {
-        webDriver.quit();
+    public void isLoginGmailVisible(){
+        Assertions.assertTrue(emailLoginAddressAndPhone.isDisplayed());
     }
+
 }

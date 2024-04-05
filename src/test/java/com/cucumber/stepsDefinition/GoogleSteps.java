@@ -1,6 +1,9 @@
 package com.cucumber.stepsDefinition;
 
 import com.cucumber.pageObject.GooglePageElements;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,22 +15,29 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
-
+import java.util.Properties;
 
 
 public class GoogleSteps extends BaseClass {
 
-    @Given("I launch the browser {string}")
-    public void iLaunchTheBrowser(String browser) {
-        logger = Logger.getLogger("Google");
+    @Before
+    public void setup() throws IOException {
+        //reading properties file
+        configProperties = new Properties();
+        FileInputStream configPropertiesFile = new FileInputStream(System.getProperty("user.dir") +"\\src\\test\\resources\\cucumber\\config.properties");
+        configProperties.load(configPropertiesFile);
+
+        logger = Logger.getLogger("Testing Google site");
         PropertyConfigurator.configure( System.getProperty("user.dir") +"\\src\\test\\resources\\cucumber\\log4j.properties");
 
-        switch (browser) {
+        switch (configProperties.getProperty("browser")) {
             case "edge" -> {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions options = new EdgeOptions();
-                options.addArguments("--remote-allow-origins");
+                options.addArguments("--remote-allow-origins=*");
                 driver = new EdgeDriver(options);
                 logger.info("I launch Edge browser");
             }
@@ -41,6 +51,16 @@ public class GoogleSteps extends BaseClass {
         }
         driver.manage().window();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+    }
+
+    @After
+    public void tearDown(){
+        driver.quit();
+        logger.info("I close the browser");
+    }
+
+    @Given("I launch the browser")
+    public void iLaunchTheBrowser() {
         googlePage = new GooglePageElements(driver);
     }
 
@@ -69,9 +89,15 @@ public class GoogleSteps extends BaseClass {
         googlePage.isWikipediaVisible();
     }
 
-    @Then("I close the browser")
-    public void iCloseTheBrowser() {
-        logger.info("I close the browser");
-        googlePage.closeBrowser();
+    @And("I launch the url {string}")
+    public void iLaunchTheUrl(String url) {
+        logger.info("I launch url " + url);
+        driver.get(url);
+    }
+
+    @Then("I see the login page to the email")
+    public void iSeeTheLoginPageToTheEmail() {
+        logger.info("I check the gmail is visible");
+        googlePage.isLoginGmailVisible();
     }
 }

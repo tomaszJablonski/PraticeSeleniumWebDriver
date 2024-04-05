@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/com/cucumber/features/googleTest.feature",
-        glue = "com.cucumber.stepsDefinition"
+        glue = "com.cucumber.stepsDefinition",
+        tags = "@functional or @regression"
 )
-public class TestRunnerGoogle {
+public class TestRunnerGoogleAllTests {
 }
