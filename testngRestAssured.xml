@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2"
+          name="Rest Assured">
+        <classes>
+            <class name="com.selenium.seleniumTestNG.restAssured.HttpRequests">
+                <methods>
+                    <include name="getUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
