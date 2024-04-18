@@ -5,9 +5,9 @@
           name="Rest Assured">
         <classes>
             <class name="com.selenium.seleniumTestNG.restAssured.HttpRequests">
-                <methods>
-                    <include name="getUsers"/>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="getUsers"/>-->
+<!--                </methods>-->
             </class>
         </classes>
     </test>
