@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Jonno",
+      "location": "Spanish",
+      "phone": "123456789",
+      "courses": [
+        "java",
+        "restAssured"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sanna",
+      "location": "Finland",
+      "phone": "123456789",
+      "courses": [
+        "javaScript",
+        "selenium"
+      ]
+    }
+  ]
+}

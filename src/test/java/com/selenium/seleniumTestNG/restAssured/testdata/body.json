@@ -1,0 +1,9 @@
+{
+  "name": "Eleonora",
+  "location": "Poland",
+  "phone": "123456789",
+  "courses": [
+    "java",
+    "restAssured"
+  ]
+}
