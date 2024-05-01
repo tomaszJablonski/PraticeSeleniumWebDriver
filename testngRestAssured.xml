@@ -10,6 +10,7 @@
             <class name="com.selenium.seleniumTestNG.restAssured.TestCookies"/>
             <class name="com.selenium.seleniumTestNG.restAssured.TestHeaders"/>
             <class name="com.selenium.seleniumTestNG.restAssured.Logging"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.ParsingJsonResponse"/>
         </classes>
     </test>
 </suite>

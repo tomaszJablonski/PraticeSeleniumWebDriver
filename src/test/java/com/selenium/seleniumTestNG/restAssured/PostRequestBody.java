@@ -15,6 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class PostRequestBody {
+    //json-server --watch students.json
 
     /*
     1)HashMap
@@ -97,7 +98,7 @@ public class PostRequestBody {
         jsonObject.put("location", "Poland");
         jsonObject.put("phone", "84641141545");
 
-        String coursesArr[] = {"Java", "Selenium"};
+        String[] coursesArr = {"Java", "Selenium"};
         JSONArray jsonArrays = new JSONArray(coursesArr);
         jsonObject.put("courses", coursesArr);
 
@@ -128,7 +129,7 @@ public class PostRequestBody {
         pojoPostRequest.setLocation("Kalisz");
         pojoPostRequest.setPhone("34543543534");
 
-        String coursesArray[] = {"Java", "Selenium"};
+        String[] coursesArray = {"Java", "Selenium"};
         pojoPostRequest.setCourses(coursesArray);
 
 
