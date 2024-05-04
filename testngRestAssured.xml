@@ -11,6 +11,7 @@
             <class name="com.selenium.seleniumTestNG.restAssured.TestHeaders"/>
             <class name="com.selenium.seleniumTestNG.restAssured.Logging"/>
             <class name="com.selenium.seleniumTestNG.restAssured.ParsingJsonResponse"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.ParsingXMLResponseBody"/>
         </classes>
     </test>
 </suite>
