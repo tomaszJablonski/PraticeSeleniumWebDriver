@@ -12,6 +12,7 @@
             <class name="com.selenium.seleniumTestNG.restAssured.Logging"/>
             <class name="com.selenium.seleniumTestNG.restAssured.ParsingJsonResponse"/>
             <class name="com.selenium.seleniumTestNG.restAssured.ParsingXMLResponseBody"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.FileUploadDownload"/>
         </classes>
     </test>
 </suite>
