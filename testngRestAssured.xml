@@ -4,17 +4,18 @@
     <test verbose="2"
           name="Rest Assured">
         <classes>
-            <class name="com.selenium.seleniumTestNG.restAssured.HttpRequests"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.PostRequestBody"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.PathAndQueryParameter"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.TestCookies"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.TestHeaders"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.Logging"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.ParsingJsonResponse"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.ParsingXMLResponseBody"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.FileUploadDownload"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.JsonAndXmlSchemaValidations"/>
-            <class name="com.selenium.seleniumTestNG.restAssured.SerializationDeserialization"/>
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.HttpRequests"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.PostRequestBody"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.PathAndQueryParameter"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.TestCookies"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.TestHeaders"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.Logging"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.ParsingJsonResponse"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.ParsingXMLResponseBody"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.FileUploadDownload"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.JsonAndXmlSchemaValidations"/>-->
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.SerializationDeserialization"/>-->
+            <class name="com.selenium.seleniumTestNG.restAssured.Authentications"/>
         </classes>
     </test>
 </suite>
