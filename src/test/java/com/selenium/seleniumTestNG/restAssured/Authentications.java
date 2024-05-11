@@ -29,12 +29,12 @@ public class Authentications {
                 .auth().digest("postman", "password")
 
                 .when()
-                    .get("https://postman-echo.com/digest-auth")
+                .get("https://postman-echo.com/digest-auth")
 
                 .then()
-                    .statusCode(200)
-                    .body("authenticated", equalTo(true))
-                    .log().body();
+                .statusCode(200)
+                .body("authenticated", equalTo(true))
+                .log().body();
     }
 
     //Preemptive - username and password user
@@ -56,7 +56,7 @@ public class Authentications {
     //Bearer Token
 
     @Test(priority = 4)
-    public void testBearerTokenAuthentication(){
+    public void testBearerTokenAuthentication() {
         /*
         1.To generate a GitHub token, follow these steps12:
         2.Log in to your GitHub account.
@@ -69,10 +69,10 @@ public class Authentications {
         9.Click on the Generate token button.
          */
 
-        String bearerToken = "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";
+        String bearerToken = "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";
 
         given()
-                .headers("Authorization","Bearer " + bearerToken)
+                .headers("Authorization", "Bearer " + bearerToken)
 
                 .when()
                 .get("https://api.github.com/user/repos")
@@ -84,10 +84,10 @@ public class Authentications {
 
     //oauth 1.0
 
-    @Test(priority = 5,enabled = false,testName = "only syntax")
-    public void testOAuth1Authentication(){
+    @Test(priority = 5, enabled = false, testName = "only syntax")
+    public void testOAuth1Authentication() {
         given()
-                .auth().oauth("consumerKey","consumerSecrat","accessToken","tokenSecrate")
+                .auth().oauth("consumerKey", "consumerSecrat", "accessToken", "tokenSecrate")
 
                 .when()
                 .get("url")
@@ -100,9 +100,9 @@ public class Authentications {
     //oauth 2.0
 
     @Test(priority = 6)
-    public void testOAuth2Authentication(){
+    public void testOAuth2Authentication() {
         given()
-                .auth().oauth2("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")
+                .auth().oauth2("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")
 
                 .when()
                 .get("https://api.github.com/users/mojombo")
@@ -113,20 +113,32 @@ public class Authentications {
     }
 
     @Test(priority = 7)
-    public void testAPIKeyAuthentication(){
+    public void testAPIKeyAuthenticationMethod1() {
         given()
-                .auth().oauth2("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")
+                .queryParam("appid","7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
 
                 .when()
-                .get("https://api.github.com/users/mojombo")
+                .get("https://api.openweathermap.org/data/2.5/weather?q=London")
 
                 .then()
                 .statusCode(200)
-                .log().all();
+                .log().body();
     }
 
-//    8ca6b067124be2905cd0a317e91eb35d
+    @Test(priority = 7)
+    public void testAPIKeyAuthenticationMethod2() {
+        given()
+                .queryParam("appid","7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
+                .pathParams("myPath","data/2.5/weather")
+                .queryParam("q","London")
 
+                .when()
+                .get("https://api.openweathermap.org/{myPath}")
+
+                .then()
+                .statusCode(200)
+                .log().body();
+    }
 
 
 
