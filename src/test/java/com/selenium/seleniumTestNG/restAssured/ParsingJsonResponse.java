@@ -14,8 +14,7 @@ public class ParsingJsonResponse {
 
     @Test(priority = 1, testName = "For small json")
     public void findAndEqualToInJsonSpecificDataInBody() {
-        https:
-//jsonpathfinder.com/
+//        https://jsonpathfinder.com/
         given()
                 .contentType(ContentType.JSON)
 
@@ -79,6 +78,6 @@ public class ParsingJsonResponse {
         }
         System.out.println("totalPrice = " + totalPrice);
 
-        Assert.assertEquals(totalPrice,250.5);
+        Assert.assertEquals(totalPrice, 250.5);
     }
 }

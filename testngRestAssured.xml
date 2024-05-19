@@ -17,6 +17,11 @@
             <class name="com.selenium.seleniumTestNG.restAssured.SerializationDeserialization"/>
             <class name="com.selenium.seleniumTestNG.restAssured.Authentications"/>
             <class name="com.selenium.seleniumTestNG.restAssured.FakerDataGenerator"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.apiChaining.CreateUser"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.apiChaining.GetUser"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.apiChaining.UpdateUser"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.apiChaining.DeleteUser"/>
+            <class name="com.selenium.seleniumTestNG.restAssured.apiChaining.CRUD"/>
         </classes>
     </test>
 </suite>
