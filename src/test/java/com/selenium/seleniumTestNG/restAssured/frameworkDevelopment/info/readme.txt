@@ -54,5 +54,10 @@ Step 4 - Create Routes class --> contains url`s
 
 Step 5 - Create UserEndPoints class --> contains CRUD methods implementation
 
+Step 6 - Create Test Cases
+
+Step 7 - Create Data Driven Test -
+         excelSheet data
+         ExcelUtility file
 
 
