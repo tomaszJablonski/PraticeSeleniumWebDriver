@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.utilities.ExtentReportManager"/>
+    </listeners>
+
     <test name="Framework Development Rest Assured">
         <classes>
             <class name="com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests"/>
+<!--            <class name="com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.DataDrivenTests"/>-->
         </classes>
     </test>
 </suite>

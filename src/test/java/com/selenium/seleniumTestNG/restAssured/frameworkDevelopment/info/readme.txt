@@ -45,6 +45,10 @@ com.github.scribejava
 com.aventstack extentreports
 org.apache.poi poi
 org.apache.poi poi-ooxml
+org.apache.logging.log4j core and api
+
+https://logging.apache.org/log4j/2.x/maven-artifacts.html
+
 
 Step 3 - create Folder structure
 
@@ -59,5 +63,18 @@ Step 6 - Create Test Cases
 Step 7 - Create Data Driven Test -
          excelSheet data
          ExcelUtility file
+         Data providers
+
+Step 8 - Generate extent reports
+
+         Extend report utility
+         testng.xml file
+
+         location Practice Selenium - > reports
+
+Step 9 - Add logs
+         log4j2 dependency
+         log4j2.xml src/test/resources
+
 
 
