@@ -76,5 +76,32 @@ Step 9 - Add logs
          log4j2 dependency
          log4j2.xml src/test/resources
 
+Step 10 - Add Jenkins to project
+          Add 2 plugin
+          1) maven surefire plugin
+             https://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+          2) maven-compiler-plugin
+             https://maven.apache.org/plugins/maven-compiler-plugin/usage.html
+              <build>
+                     <pluginManagement>
+                         <plugins>
+                             <plugin>
+                                 <groupId>org.apache.maven.plugins</groupId>
+                                 <artifactId>maven-compiler-plugin</artifactId>
+                                 <version>3.8.1</version>
+                                 <configuration>
+                                     <source>14</source>
+                                     <target>14</target>
+                                     <encoding>UTF-8</encoding>
+                                 </configuration>
+                             </plugin>
+                             <plugin>
+                                 <groupId>org.apache.maven.plugins</groupId>
+                                 <artifactId>maven-surefire-plugin</artifactId>
+                                 <version>3.2.5</version>
+                             </plugin>
+                         </plugins>
+                     </pluginManagement>
+                 </build>
 
 

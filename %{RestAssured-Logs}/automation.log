@@ -23,3 +23,37 @@
 19:17:24.061 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Updated ******
 19:17:24.621 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Deleting the User ******
 19:17:25.178 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Deleting ******
+21:17:01.790 [main] DEBUG com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - DEBUGGING
+21:17:01.801 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Creating User ******
+21:17:03.521 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Creating ******
+21:17:03.528 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Reading user info ******
+21:17:04.101 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User info is Displayed ******
+21:17:04.111 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Updating user ******
+21:17:04.672 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Updated ******
+21:17:05.244 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Deleting the User ******
+21:17:05.801 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Deleting ******
+21:17:05.801 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Creating User ******
+21:17:06.376 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Creating ******
+21:17:06.380 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Reading user info ******
+21:17:06.936 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User info is Displayed ******
+21:17:06.939 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Updating user ******
+21:17:07.498 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Updated ******
+21:17:08.063 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Deleting the User ******
+21:17:08.617 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Deleting ******
+22:46:35.737 [main] DEBUG com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - DEBUGGING
+22:46:35.747 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Creating User ******
+22:46:37.386 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Creating ******
+22:46:37.393 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Reading user info ******
+22:46:37.963 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User info is Displayed ******
+22:46:37.965 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Updating user ******
+22:46:38.521 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Updated ******
+22:46:39.068 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Deleting the User ******
+22:46:39.637 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Deleting ******
+22:46:39.638 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Creating User ******
+22:46:40.213 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Creating ******
+22:46:40.215 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Reading user info ******
+22:46:40.769 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User info is Displayed ******
+22:46:40.770 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Updating user ******
+22:46:41.327 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Updated ******
+22:46:41.896 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** Deleting the User ******
+22:46:42.464 [main] INFO  com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test.UserTests - ***** User is Deleting ******

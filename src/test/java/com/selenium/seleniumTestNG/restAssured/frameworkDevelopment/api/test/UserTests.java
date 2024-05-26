@@ -2,6 +2,7 @@ package com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.test;
 
 import com.github.javafaker.Faker;
 import com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.endpoints.UserEndPoints;
+import com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.endpoints.UserEndPointsUsingProperties;
 import com.selenium.seleniumTestNG.restAssured.frameworkDevelopment.api.payload.User;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -85,6 +86,63 @@ public class UserTests {
         logger.info("***** Deleting the User ******");
 
         Response response = UserEndPoints.deleteUser(this.userPayload.getUsername());
+        response.then().log().all();
+        Assert.assertEquals(response.statusCode(),200);
+        logger.info("***** User is Deleting ******");
+
+    }
+
+    //USING PROPERTIES
+
+    @Test(priority = 5)
+    public void testPostUserUsingProperties(){
+        logger.info("***** Creating User ******");
+
+        Response response = UserEndPointsUsingProperties.createUser(userPayload);
+        response.then().log().all();
+        Assert.assertEquals(response.getStatusCode(),200);
+
+        logger.info("***** User is Creating ******");
+
+    }
+
+    @Test(priority = 6)
+    public void testGetUserByNameUsingProperties(){
+        logger.info("***** Reading user info ******");
+
+
+        Response response = UserEndPointsUsingProperties.readUser(this.userPayload.getUsername());
+        response.then().log().body();
+        Assert.assertEquals(response.statusCode(),200);
+
+        logger.info("***** User info is Displayed ******");
+    }
+
+    @Test(priority = 7)
+    public void testUpdateUserByNameUsingProperties(){
+        logger.info("***** Updating user ******");
+
+        //update data using payload
+        userPayload.setFirstName(faker.name().firstName());
+        userPayload.setLastName(faker.name().lastName());
+        userPayload.setEmail(faker.internet().emailAddress());
+
+        Response response = UserEndPointsUsingProperties.updateUser(this.userPayload.getUsername(), userPayload);
+        response.then().log().body();
+        Assert.assertEquals(response.getStatusCode(),200);
+
+        logger.info("***** User is Updated ******");
+
+        //Check data after update
+        Response responseAfterUpdate = UserEndPoints.readUser(this.userPayload.getUsername());
+        Assert.assertEquals(responseAfterUpdate.statusCode(),200);
+    }
+
+    @Test(priority = 8)
+    public void testDeleteUserByNameUsingProperties(){
+        logger.info("***** Deleting the User ******");
+
+        Response response = UserEndPointsUsingProperties.deleteUser(this.userPayload.getUsername());
         response.then().log().all();
         Assert.assertEquals(response.statusCode(),200);
         logger.info("***** User is Deleting ******");
