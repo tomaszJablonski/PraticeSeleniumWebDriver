@@ -35,7 +35,7 @@ public class UserEndPoints {
         return response;
     }
 
-    public static Response updateUser(String username,User payload) {
+    public static Response updateUser(String username, User payload) {
         Response response =
                 given()
 

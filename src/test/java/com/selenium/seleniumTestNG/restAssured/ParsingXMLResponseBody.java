@@ -73,7 +73,6 @@ public class ParsingXMLResponseBody {
                 break;
             }
         }
-
         Assert.assertEquals(status, true);
     }
 }

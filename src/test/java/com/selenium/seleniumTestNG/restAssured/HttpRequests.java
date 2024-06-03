@@ -53,14 +53,13 @@ public class HttpRequests {
         hashMap.put("name", "morpheus");
         hashMap.put("job", "leader");
 
-        id=given()
+        id = given()
                 .contentType("application/json")
                 .body(hashMap)
 
-       .when()
+                .when()
                 .post("https://reqres.in/api/users")
                 .jsonPath().getInt("id");
-
 
 
 //       .then()
@@ -69,7 +68,7 @@ public class HttpRequests {
     }
 
     @Test(priority = 3, dependsOnMethods = ("createUser"))
-    public void editUser(){
+    public void editUser() {
 //        Put
 //                /api/users/2
 //        {
@@ -87,19 +86,19 @@ public class HttpRequests {
                 .when()
                 .put("https://reqres.in/api/users/" + id)
 
-       .then()
+                .then()
                 .statusCode(200)
                 .log().all();
     }
 
     @Test(priority = 4)
-    public void deleteUser(){
+    public void deleteUser() {
 //        Delete
 //                /api/users/2
         given()
 
                 .when()
-                        .delete("https://reqres.in/api/users/" + id)
+                .delete("https://reqres.in/api/users/" + id)
 
                 .then()
                 .statusCode(204)

@@ -115,7 +115,7 @@ public class Authentications {
     @Test(priority = 7)
     public void testAPIKeyAuthenticationMethod1() {
         given()
-                .queryParam("appid","7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
+                .queryParam("appid", "7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
 
                 .when()
                 .get("https://api.openweathermap.org/data/2.5/weather?q=London")
@@ -128,9 +128,9 @@ public class Authentications {
     @Test(priority = 7)
     public void testAPIKeyAuthenticationMethod2() {
         given()
-                .queryParam("appid","7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
-                .pathParams("myPath","data/2.5/weather")
-                .queryParam("q","London")
+                .queryParam("appid", "7eae6630881e9f21a4e6ca6725addfe7") //appid is APIKey
+                .pathParams("myPath", "data/2.5/weather")
+                .queryParam("q", "London")
 
                 .when()
                 .get("https://api.openweathermap.org/{myPath}")
@@ -139,7 +139,4 @@ public class Authentications {
                 .statusCode(200)
                 .log().body();
     }
-
-
-
 }

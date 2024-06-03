@@ -50,14 +50,13 @@ public class ParsingJsonResponse {
 
         JSONObject jsonObject = new JSONObject(response.asString());
 
-//        print all titles of the book
+//      print all titles of the book
         for (int i = 0; i < jsonObject.getJSONArray("book").length(); i++) {
             String bookTitles = jsonObject.getJSONArray("book").getJSONObject(i).get("title").toString();
             System.out.println(bookTitles);
-
         }
 
-//        Szuka czy jest książka o podanym tytule w json
+//      Szuka czy jest książka o podanym tytule w json
         boolean status = false;
 
         for (int i = 0; i < jsonObject.getJSONArray("book").length(); i++) {

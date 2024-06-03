@@ -32,6 +32,5 @@ public class FakerDataGenerator {
 
         System.out.println("emailAddress = " + emailAddress);
         System.out.println("safeEmailAddress = " + safeEmailAddress);
-
     }
 }

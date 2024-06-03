@@ -5,7 +5,6 @@ import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-
 import static io.restassured.RestAssured.given;
 
 public class TestHeaders {
@@ -27,7 +26,7 @@ public class TestHeaders {
     }
 
     //tego sie nie używa to tylko żeby zrozumieć
-    @Test(priority = 2,enabled = false)
+    @Test(priority = 2, enabled = false)
     public void getHeaders() {
         Response response = given()
                 .when()
@@ -44,10 +43,10 @@ public class TestHeaders {
         //        header name:value
         //        header name:value
         //        header name:value
-       Headers myHeaders = response.getHeaders();
+        Headers myHeaders = response.getHeaders();
 
-       for (Header header: myHeaders){
-           System.out.println(header.getName() + " " +  header.getValue());
-       }
+        for (Header header : myHeaders) {
+            System.out.println(header.getName() + " " + header.getValue());
+        }
     }
 }
